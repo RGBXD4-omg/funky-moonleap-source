@@ -42,7 +42,7 @@ class FreeplayGroup extends MusicBeatGroup
 		GlobalMenuState.spawnMenu = groupName = 'freeplay';
 		
 		// foda
-		#if !html5
+		#if DISCORD_RPC
 		Discord.changePresence('FREEPLAY MENU', 'Main Menu');
 		#end
 		

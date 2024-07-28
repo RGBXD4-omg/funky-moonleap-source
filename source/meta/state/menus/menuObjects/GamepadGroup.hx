@@ -17,7 +17,7 @@ class GamepadGroup extends MusicBeatGroup
 		super();
 		groupName = 'gamepad';
 		
-		#if !html5
+		#if DISCORD_RPC
 		Discord.changePresence('CONTROLS', 'Main Menu');
 		#end
 		

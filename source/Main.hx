@@ -93,24 +93,10 @@ class Main extends Sprite
 		// simply said, a state is like the 'surface' area of the window where everything is drawn.
 		// if you've used gamemaker you'll probably understand the term surface better
 		// this defines the surface bounds
-
-		var stageWidth:Int = Lib.current.stage.stageWidth;
-		var stageHeight:Int = Lib.current.stage.stageHeight;
-
-		if (zoom == -1)
-		{
-			var ratioX:Float = stageWidth / gameWidth;
-			var ratioY:Float = stageHeight / gameHeight;
-			zoom = Math.min(ratioX, ratioY);
-			gameWidth = Math.ceil(stageWidth / zoom);
-			gameHeight = Math.ceil(stageHeight / zoom);
-			// this just kind of sets up the camera zoom in accordance to the surface width and camera zoom.
-			// if set to negative one, it is done so automatically, which is the default.
-		}
 		
 		// here we set up the base game
 		var gameCreate:FlxGame;
-		gameCreate = new FlxGame(gameWidth, gameHeight, mainClassState, #if (flixel < "5.0.0") zoom, #end framerate, framerate, skipSplash);
+		gameCreate = new FlxGame(gameWidth, gameHeight, mainClassState, framerate, framerate, skipSplash);
 		addChild(gameCreate); // and create it afterwards
 
 		// default game FPS settings, I'll probably comment over them later.
@@ -210,7 +196,7 @@ class Main extends Sprite
 		crashDialoguePath += ".exe";
 		#end
 
-		if (FileSystem.exists(crashDialoguePath))
+		if (Assets.exists(crashDialoguePath))
 		{
 			Sys.println("Found crash dialog: " + crashDialoguePath);
 			new Process(crashDialoguePath, [path]);

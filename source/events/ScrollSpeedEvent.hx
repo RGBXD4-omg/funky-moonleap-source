@@ -3,6 +3,7 @@ package events;
 import haxe.Json;
 import haxe.format.JsonParser;
 import lime.utils.Assets;
+import openfl.utils.Assets as OpenFlAssets;
 import sys.FileSystem;
 import sys.io.File;
 
@@ -23,9 +24,9 @@ class ScrollSpeedEvent
 		
 		var jsonPath:String = Paths.getPath('speed-changes/$curSong.json', TEXT);
 		
-		if(FileSystem.exists(jsonPath))
+		if(OpenFlAssets.exists(jsonPath))
 		{
-			var fuck:ScrollChangeData = cast Json.parse(File.getContent(jsonPath).trim());
+			var fuck:ScrollChangeData = cast Json.parse(Assets.getText(jsonPath).trim());
 			
 			for(i in fuck.data)
 			{

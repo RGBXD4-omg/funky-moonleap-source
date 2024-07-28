@@ -36,7 +36,7 @@ class CreditsGroup extends MusicBeatGroup
 		super();
 		groupName = 'credits';
 		// foda
-		#if !html5
+		#if DISCORD_RPC
 		Discord.changePresence('CREDITS', 'Main Menu');
 		#end
 		// psych engine omg!!!

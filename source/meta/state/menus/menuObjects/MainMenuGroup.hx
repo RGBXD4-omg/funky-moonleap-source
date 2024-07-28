@@ -22,7 +22,7 @@ class MainMenuGroup extends MusicBeatGroup
 		super();
 		groupName = GlobalMenuState.spawnMenu = 'main-menu';
 		
-		#if !html5
+		#if DISCORD_RPC
 		Discord.changePresence('MAIN MENU', 'Main Menu');
 		#end
 		

@@ -1,7 +1,7 @@
 package;
 
 import flixel.FlxG;
-import flixel.sound.FlxSound;
+import flixel.syetem.FlxSound;
 import meta.data.*;
 import openfl.utils.Assets;
 import sys.FileSystem;

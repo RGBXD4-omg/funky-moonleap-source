@@ -35,7 +35,7 @@ class ControlsGroup extends MusicBeatGroup
 		super();
 		groupName = 'controls';
 		
-		#if !html5
+		#if DISCORD_RPC
 		Discord.changePresence('CONTROLS', 'Main Menu');
 		#end
 		

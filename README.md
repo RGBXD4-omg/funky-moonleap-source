@@ -19,6 +19,12 @@ If you just want to download the mod go [here](https://gamebanana.com/mods/37872
 
 * New mechanics
 
+### LOL
+
+* main porter: RGBXD4
+
+* 青水开局3a插标一技能插标闪走拿到先手🤔
+
 #### Special thanks to Guselect, who sent us assets from the original game <33333333
 
 ----------------------------------------------

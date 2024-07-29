@@ -97,6 +97,10 @@ class GlobalMenuState extends MusicBeatState
 		curMenu = nextMenu;
 		
 		add(curMenu);
+
+		#if android
+		addVirtualPad(FULL, A_B);
+		#end
 	}
 	
 	override function update(elapsed:Float)

@@ -62,6 +62,9 @@ class WebsiteSubState extends MusicBeatSubState
 				canChoose = true;
 			}
 		});
+		#if android
+		addVirtualPad(LEFT_RIGHT, A);
+		#end
 	}
 	
 	var canChoose:Bool = false;

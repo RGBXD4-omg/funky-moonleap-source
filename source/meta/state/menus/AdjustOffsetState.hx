@@ -109,6 +109,10 @@ class AdjustOffsetState extends MusicBeatState
 		
 		var creditDisc = new gameObjects.userInterface.CreditDisc('daylight');
 		add(creditDisc);
+
+		#if android
+		addVirtualPad(LEFT_RIGHT, A_B);
+		#end
 	}
 	
 	var holdCount:Float = 0;

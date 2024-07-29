@@ -86,6 +86,10 @@ class PauseSubState extends MusicBeatSubState
 			pauseMusic.play(false, FlxG.random.int(0, Std.int(pauseMusic.length * 0.5)));
 			FlxG.sound.list.add(pauseMusic);
 		});
+		#if android
+		addVirtualPad(UP_DOWN, A);
+		addPadCamera();
+		#end
 	}
 
 	function reloadLevelInfo() {

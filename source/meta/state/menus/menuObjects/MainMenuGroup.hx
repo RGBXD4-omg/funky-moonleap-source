@@ -122,7 +122,9 @@ class MainMenuGroup extends MusicBeatGroup
 					
 					case 'ost' | 'buy moonleap':
 						var link:String = (optionShit[curSelected] == 'ost') ? "https://on.soundcloud.com/ha9oz" : "https://store.steampowered.com/app/2166050/Moonleap/";
-						
+						#if android
+						removeVirtualPad();
+						#end
 						FlxG.state.openSubState(new WebsiteSubState(link));
 						//selectedSomething = false;
 						

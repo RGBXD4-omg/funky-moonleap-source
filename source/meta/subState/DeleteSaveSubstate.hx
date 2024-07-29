@@ -61,6 +61,10 @@ class DeleteSaveSubstate extends MusicBeatSubState
 				canChoose = true;
 			}
 		});
+
+		#if android
+		addVirtualPad(UP_DOWN, A_B);
+		#end
 	}
 	
 	var canChoose:Bool = false;

@@ -41,6 +41,10 @@ class MidnightState extends MusicBeatState
 		add(clock);
 		
 		readLine();
+
+		#if android
+		addVirtualPad(NONE, A);
+		#end
 	}
 	
 	override function update(elapsed:Float)

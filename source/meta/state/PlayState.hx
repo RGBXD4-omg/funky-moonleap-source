@@ -1764,10 +1764,9 @@ class PlayState extends MusicBeatState
 			
 			resyncVocals();
 			
-			#if desktop
 			// Song duration in a float, useful for the time left feature
 			songLength = songMusic.length;
-			
+			#if desktop
 			// Updating Discord Rich Presence (with Time Left)
 			updateRPC(false);
 			#end

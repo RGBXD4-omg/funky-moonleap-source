@@ -99,7 +99,7 @@ class AndroidControls extends FlxSpriteGroup {
 			case 0: 
 				HITBOX;
 			default:
-			    HITBOX
+			    HITBOX;
 		}
 	}
 }

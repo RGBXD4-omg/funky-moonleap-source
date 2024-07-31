@@ -31,7 +31,7 @@ class CreditDisc extends FlxSpriteGroup
 			case 'moonlight':
 				var composer = 'julianobeta';
 			default:
-				var composer = '';
+				var composer = 'beastlychip';
 		}
 		
 		disc = new FlxSprite().loadGraphic(Paths.image(location + 'disc'));

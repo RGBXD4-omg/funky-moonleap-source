@@ -15,23 +15,21 @@ using StringTools;
 class CreditDisc extends FlxSpriteGroup
 {
 	private var location:String = 'UI/default/base/songCredits/';
-	public var composer:String = 'beastlychip';
 	
 	var disc:FlxSprite;
 	var bg:FlxSprite;
 	var text:FlxText;
 	
-	public function new()
+	public function new(song:String = 'leap')
 	{
 		super();
-		
-		switch(PlayState.SONG.song.toLowerCase())
+		var composer:String = 'beastlychip';
+		switch(song)
 		{
 			case 'crescent' | 'devlog':
-				 composer = 'anakimplay';
+				composer = 'anakimplay';
 			case 'moonlight':
-				 composer = 'julianobeta';
-		
+				composer = 'julianobeta';
 		}
 		
 		disc = new FlxSprite().loadGraphic(Paths.image(location + 'disc'));

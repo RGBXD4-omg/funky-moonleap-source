@@ -24,7 +24,7 @@ class CreditDisc extends FlxSpriteGroup
 	{
 		super();
 		var composer:String = 'beastlychip';
-		switch(song)
+		switch(PlayState.SONG.song.toLowerCase())
 		{
 			case 'crescent' | 'devlog':
 				composer = 'anakimplay';

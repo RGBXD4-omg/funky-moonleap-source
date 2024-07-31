@@ -43,7 +43,7 @@ import openfl.filters.ShaderFilter;
 import openfl.media.Sound;
 import openfl.utils.Assets;
 import sys.io.File;
-import gameObjects.userInterface.creditDisc;
+import gameObjects.userInterface.CreditDisc;
 
 using StringTools;
 

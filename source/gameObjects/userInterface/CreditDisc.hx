@@ -20,11 +20,12 @@ class CreditDisc extends FlxSpriteGroup
 	var bg:FlxSprite;
 	var text:FlxText;
 	
-	public function new(song:String = 'leap')
+	public function new()
 	{
 		super();
+		var song = PlayState.SONG.song.toLowerCase();
 		var composer:String = '';
-		switch(PlayState.SONG.song.toLowerCase())
+		switch(song)
 		{
 			case 'crescent' | 'devlog':
 				composer = 'anakimplay';

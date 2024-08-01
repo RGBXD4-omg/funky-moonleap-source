@@ -480,32 +480,13 @@ class PlayState extends MusicBeatState
 		var creditDisc = new CreditDisc(creditSong);
 		creditDisc.cameras = [strumHUD[strumHUD.length - 1]];
 		add(creditDisc);
+
 		#if android
-		if (!SaveData.trueSettings.get('Way Of Space'))
-		{
-	
+		
 		addAndroidControls();
 		androidc.visible = true;
 		
-		}
-		else if (SaveData.trueSettings.get('Way Of Space'))
-		{
-		switch (SONG.song.toLowerCase())
-		{
-		case 'midnight-secrets' | 'leap-(d-side-mix)':
-	
-		addAndroidControls();
-		addVirtualPad(NONE, A);
-		androidc.visible = true;
-		
-		default:
-	
-		addAndroidControls();
-		androidc.visible = true;
-		
-		}
-		}
-		#end //我知道这很屎，但应该可以运行
+		#end //寄
 	}
 	
 	// also preloads icons
@@ -684,7 +665,7 @@ class PlayState extends MusicBeatState
 		
 		super.update(elapsed);
 		
-		if(controls.ACTION #if android || _virtualpad.buttonA.justPressed #end && !startingSong)
+		if(controls.ACTION && !startingSong)
 		{
 			switch(SONG.song.toLowerCase())
 			{

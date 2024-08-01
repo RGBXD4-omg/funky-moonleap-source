@@ -189,6 +189,11 @@ class SaveData
 			Checkmark,
 			"Simplifies the judgement animations, displaying only one judgement / rating sprite at a time.",
 		],
+		'Way Of Space' => [
+			false,
+			Checkmark,
+			"Oops"
+		],
 		'Offset' => [0],
 	];
 	

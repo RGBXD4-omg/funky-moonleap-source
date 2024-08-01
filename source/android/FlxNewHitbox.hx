@@ -27,8 +27,8 @@ class FlxNewHitbox extends FlxSpriteGroup
 	{
 		super();
 
-	//if (!SaveData.trueSettings.get('Way Of Space'))
-	//	{
+	if (!SaveData.trueSettings.get('Way Of Space'))
+		{
 
 		switch (PlayState.SONG.song.toLowerCase())
 		{
@@ -51,14 +51,14 @@ class FlxNewHitbox extends FlxSpriteGroup
 		
 		}
 
-	/*	}
-		else if (SaveData.trueSettings.get('Way Of Space'))
+		}
+		else
 		{
 		add(buttonLeft = createHint(0, 0, Std.int(FlxG.width / 4), FlxG.height, 0xFF00FF));
 		add(buttonDown = createHint(FlxG.width / 4, 0, Std.int(FlxG.width / 4), FlxG.height, 0x00FFFF));
 		add(buttonUp = createHint(FlxG.width / 2, 0, Std.int(FlxG.width / 4), FlxG.height, 0x00FF00));
 		add(buttonRight = createHint((FlxG.width / 2) + (FlxG.width / 4), 0, Std.int(FlxG.width / 4), FlxG.height, 0xFF0000));
-		}*/
+		}
 		
 		scrollFactor.set();
 	}

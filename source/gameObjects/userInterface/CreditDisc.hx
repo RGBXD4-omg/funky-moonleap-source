@@ -20,16 +20,18 @@ class CreditDisc extends FlxSpriteGroup
 	var bg:FlxSprite;
 	var text:FlxText;
 	
-	public function new(song:String = 'leap')
+	public function new()
 	{
 		super();
-		var composer:String = 'beastlychip';
-		switch(song)
+		var composer:String = composer;
+		switch(PlayState.SONG.song.toLowerCase())
 		{
 			case 'crescent' | 'devlog':
 				composer = 'anakimplay';
 			case 'moonlight':
 				composer = 'julianobeta';
+			default:
+				composer = 'beastlychip';
 		}
 		
 		disc = new FlxSprite().loadGraphic(Paths.image(location + 'disc'));

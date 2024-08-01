@@ -192,7 +192,7 @@ class SaveData
 		'Way Of Space' => [
 			false,
 			Checkmark,
-			"Oops"
+			"Oops, this by RGBXD4 (rgbxdb)"
 		],
 		'Offset' => [0],
 	];

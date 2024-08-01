@@ -134,7 +134,7 @@ class GameOverSubstate extends MusicBeatSubState
 		if (bf.animation.curAnim.name == 'firstDeath' && bf.animation.curAnim.finished)
 		{
 			FlxG.sound.playMusic(Paths.music('gameOver'));
-			var creditDisc = new gameObjects.userInterface.CreditDisc('moonlight');
+			var creditDisc = new gameObjects.userInterface.CreditDisc();
 			creditDisc.cameras = [camHUD];
 			add(creditDisc);
 		}

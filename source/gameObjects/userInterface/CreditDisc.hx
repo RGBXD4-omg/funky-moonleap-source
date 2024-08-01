@@ -39,7 +39,7 @@ class CreditDisc extends FlxSpriteGroup
 		text = new FlxText(disc.x + disc.width + 10, 0, 0, '\nby: $composer', 24);
 		text.scrollFactor.set();
 		text.setFormat(Main.gFont, 28, FlxColor.fromRGB(0,170,255), LEFT);
-		text.text =  CoolUtil.dashToSpace(song);
+		// text.text =  CoolUtil.dashToSpace(song);
 		// text.text += '\nby: $composer';
 		text.y = FlxG.height - text.height - 5;
 		

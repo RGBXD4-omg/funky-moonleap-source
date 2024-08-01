@@ -107,7 +107,7 @@ class AdjustOffsetState extends MusicBeatState
 		daSong.play();
 		FlxG.sound.list.add(daSong);
 		
-		var creditDisc = new gameObjects.userInterface.CreditDisc();
+		var creditDisc = new gameObjects.userInterface.CreditDisc('daylight');
 		add(creditDisc);
 
 		#if android

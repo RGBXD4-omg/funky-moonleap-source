@@ -487,7 +487,7 @@ class PlayState extends MusicBeatState
 		{
 		case 'midnight-secrets' | 'leap-(d-side-mix)':
 		#if android
-		addVirtualPad(NONE, _A);
+		addVirtualPad(NONE, MB);
 		addAndroidControls();
 		androidc.visible = true;	
 		#end 

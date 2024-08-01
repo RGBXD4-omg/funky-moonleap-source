@@ -481,12 +481,31 @@ class PlayState extends MusicBeatState
 		creditDisc.cameras = [strumHUD[strumHUD.length - 1]];
 		add(creditDisc);
 
+		if (SaveData.trueSettings.get('Way Of Space'))
+		{ 
+		switch (SONG.song.toLowerCase())
+		{
+		case 'midnight-secrets' | 'leap-(d-side-mix)':
 		#if android
-		
+		addVirtualPad(NONE, A);
+		addAndroidControls();
+		androidc.visible = true;	
+		#end 
+
+		default:
+		#if android
 		addAndroidControls();
 		androidc.visible = true;
-		
-		#end //寄
+		#end
+		}
+		}
+		else
+		{
+		#if android
+		addAndroidControls();
+		androidc.visible = true;
+		#end
+		}
 	}
 	
 	// also preloads icons

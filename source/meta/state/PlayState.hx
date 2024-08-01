@@ -477,7 +477,7 @@ class PlayState extends MusicBeatState
 					creditSong += (storyDifficulty == 1) ? " (day only)" : " (night only)";
 		}
 		
-		var creditDisc = new CreditDisc(creditSong);
+		var creditDisc = new CreditDisc();
 		creditDisc.cameras = [strumHUD[strumHUD.length - 1]];
 		add(creditDisc);
 

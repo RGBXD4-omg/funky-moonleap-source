@@ -55,6 +55,7 @@ class OptionsGroup extends MusicBeatGroup
 				"Framerate Cap",
 				'FPS Counter',
 				'Memory Counter',
+				"Way Of Space",
 			],
 			"appearence" => [
 				'Fullscreen',

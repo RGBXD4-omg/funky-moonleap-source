@@ -23,7 +23,7 @@ class CreditDisc extends FlxSpriteGroup
 	public function new()
 	{
 		super();
-		var composer:String = composer;
+		var composer:String = '';
 		switch(PlayState.SONG.song.toLowerCase())
 		{
 			case 'crescent' | 'devlog':

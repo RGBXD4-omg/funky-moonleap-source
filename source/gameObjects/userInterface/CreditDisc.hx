@@ -33,11 +33,11 @@ class CreditDisc extends FlxSpriteGroup
 		switch(song)
 		{
 			case 'crescent' | 'devlog':
-				textbro += '\nby: anakimplay';
+				textbro += "\nby: anakimplay";
 			case 'moonlight':
-				textbro += '\nby: julianobeta';
+				textbro += "\nby: julianobeta";
 			default:
-				textbro += '\nby: beastlychip';
+				textbro += "\nby: beastlychip";
 		}
 		
 		disc = new FlxSprite().loadGraphic(Paths.image(location + 'disc'));

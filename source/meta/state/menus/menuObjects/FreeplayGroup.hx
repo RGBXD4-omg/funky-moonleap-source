@@ -42,7 +42,7 @@ class FreeplayGroup extends MusicBeatGroup
 		GlobalMenuState.spawnMenu = groupName = 'freeplay';
 		
 		// foda
-		#if DISCORD_RPC
+		#if !html5
 		Discord.changePresence('FREEPLAY MENU', 'Main Menu');
 		#end
 		
@@ -211,15 +211,15 @@ class FreeplayGroup extends MusicBeatGroup
 		{
 			//infoTxt.text += "\na secret needs to be found to unlock";
 			var hints:Array<String> = [
-				"beat one of the first three songs to unlock",
-				"beat the fourth song to unlock",
-				"find it on a youtube video (not literally)",
-				"nothing to see here",
+				"\nbeat one of the first three songs to unlock",
+				"\nbeat the fourth song to unlock",
+				"\nfind it on a youtube video (not literally)",
+				"\nnothing to see here",
 			];
 			if(Highscore.getHighscore('leap-(d-side-mix)').score > 0)
 				hints[3] = "ill tell you at midnight";
 			
-			infoTxt.text = '\n'+hints[curSelected];
+			infoTxt.text += hints[curSelected];
 		}
 		else
 		{
@@ -229,7 +229,6 @@ class FreeplayGroup extends MusicBeatGroup
 		}
 		infoTxt.x = (FlxG.width / 2) - (infoTxt.width / 2);
 		infoTxt.y = FlxG.height - infoTxt.height - 10;
-		
 	}
 	
 	function changeSelected(?change:Int = 0, ?playSound:Bool = true)

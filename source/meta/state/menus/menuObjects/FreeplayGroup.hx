@@ -205,7 +205,7 @@ class FreeplayGroup extends MusicBeatGroup
 		
 		infoTxt.text = "";
 		var selectedSong:String = songs[curRow][curSelected];
-		infoTxt.text += selectedSong.toLowerCase();
+		infoTxt.text += CoolUtil.dashToSpace(selectedSong.toLowerCase());
 		
 		if(selectedSong == '???')
 		{
@@ -219,7 +219,7 @@ class FreeplayGroup extends MusicBeatGroup
 			if(Highscore.getHighscore('leap-(d-side-mix)').score > 0)
 				hints[3] = "ill tell you at midnight";
 			
-			infoTxt.text += '\n' + hints[curSelected];
+			infoTxt.text = '\n'+hints[curSelected];
 		}
 		else
 		{
@@ -229,6 +229,7 @@ class FreeplayGroup extends MusicBeatGroup
 		}
 		infoTxt.x = (FlxG.width / 2) - (infoTxt.width / 2);
 		infoTxt.y = FlxG.height - infoTxt.height - 10;
+		
 	}
 	
 	function changeSelected(?change:Int = 0, ?playSound:Bool = true)

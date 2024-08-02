@@ -205,7 +205,7 @@ class FreeplayGroup extends MusicBeatGroup
 		
 		infoTxt.text = "";
 		var selectedSong:String = songs[curRow][curSelected];
-		infoTxt.text += CoolUtil.dashToSpace(selectedSong.toLowerCase());
+		infoTxt.text += selectedSong.toLowerCase();
 		
 		if(selectedSong == '???')
 		{

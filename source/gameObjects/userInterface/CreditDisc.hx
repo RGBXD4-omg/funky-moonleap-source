@@ -19,6 +19,7 @@ class CreditDisc extends FlxSpriteGroup
 	var disc:FlxSprite;
 	var bg:FlxSprite;
 	var text:FlxText;
+	var song:String = 'leap';
 	
 	public function new(song:String = 'leap')
 	{

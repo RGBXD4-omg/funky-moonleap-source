@@ -31,7 +31,7 @@ class CreditDisc extends FlxSpriteGroup
 			case 'moonlight':
 				textbro = '\nby: julianobeta';
 			default:
-				textbro = '\nby: ';
+				textbro = '\nby: beastlychip';
 		}
 		
 		disc = new FlxSprite().loadGraphic(Paths.image(location + 'disc'));

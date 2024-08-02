@@ -222,7 +222,7 @@ class FreeplayGroup extends MusicBeatGroup
 			if(Highscore.getHighscore('leap-(d-side-mix)').score > 0)
 				hints[3] = "ill tell you at midnight";
 			
-			infoTxt.text = hints[curSelected];
+			infoTxt.text += hints[curSelected];
 		}
 		else
 		{

@@ -204,8 +204,11 @@ class FreeplayGroup extends MusicBeatGroup
 		curMisses[1] 	= isNear(curMisses[1],	 curMisses[0],	 10);
 		
 		infoTxt.text = "";
+		
+		infoTxt.x = (FlxG.width / 2) - (infoTxt.width / 2);
+		infoTxt.y = FlxG.height - infoTxt.height - 10;
+
 		var selectedSong:String = songs[curRow][curSelected];
-		infoTxt.text += CoolUtil.dashToSpace(selectedSong.toLowerCase());
 		
 		if(selectedSong == '???')
 		{
@@ -219,16 +222,16 @@ class FreeplayGroup extends MusicBeatGroup
 			if(Highscore.getHighscore('leap-(d-side-mix)').score > 0)
 				hints[3] = "ill tell you at midnight";
 			
-			infoTxt.text += hints[curSelected];
+			infoTxt.text = hints[curSelected];
 		}
 		else
 		{
-			infoTxt.text += "\nscore: " + curScore[1];
-			infoTxt.text += " - accuracy: " + Timings.formatAccuracy(curAccuracy[1]) + "%";
-			infoTxt.text += " - misses: " + ((curMisses[1] < 0) ? "--" : "" + curMisses[1]);
+		infoTxt.text = CoolUtil.dashToSpace(selectedSong.toLowerCase());
+		infoTxt.text += "\nscore: " + curScore[1];
+		infoTxt.text += " - accuracy: " + Timings.formatAccuracy(curAccuracy[1]) + "%";
+		infoTxt.text += " - misses: " + ((curMisses[1] < 0) ? "--" : "" + curMisses[1]);
 		}
-		infoTxt.x = (FlxG.width / 2) - (infoTxt.width / 2);
-		infoTxt.y = FlxG.height - infoTxt.height - 10;
+
 	}
 	
 	function changeSelected(?change:Int = 0, ?playSound:Bool = true)

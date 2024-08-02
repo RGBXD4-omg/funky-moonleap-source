@@ -41,7 +41,7 @@ class CreditDisc extends FlxSpriteGroup
 		text.setFormat(Main.gFont, 28, FlxColor.fromRGB(0,170,255), LEFT);
 		text.text =  CoolUtil.dashToSpace(song);
 		text.text += '\n';
-		text.text += 'by:$compser';
+		text.text += 'by:${compser}';
 		text.y = FlxG.height - text.height - 5;
 		
 		bg = new FlxSprite().loadGraphic(Paths.image(location + 'bar'));

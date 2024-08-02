@@ -9,7 +9,9 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import meta.subState.WebsiteSubState;
+#if desktop
 import meta.data.dependency.Discord;
+#end
 import meta.state.menus.*;
 import meta.state.PlayState;
 import meta.data.*;
@@ -202,35 +204,33 @@ class FreeplayGroup extends MusicBeatGroup
 		curScore[1] 	= isNear(curScore[1],	 curScore[0],	 10);
 		curAccuracy[1] 	= isNear(curAccuracy[1], curAccuracy[0], 0.12);
 		curMisses[1] 	= isNear(curMisses[1],	 curMisses[0],	 10);
-
-		var selectedSong:String = songs[curRow][curSelected];
-		infoTxt.text = CoolUtil.dashToSpace(selectedSong.toLowerCase());
 		
-		infoTxt.x = (FlxG.width / 2) - (infoTxt.width / 2);
-		infoTxt.y = FlxG.height - infoTxt.height - 10;
+		infoTxt.text = "";
+		var selectedSong:String = songs[curRow][curSelected];
+		infoTxt.text += CoolUtil.dashToSpace(selectedSong.toLowerCase());
 		
 		if(selectedSong == '???')
 		{
 			//infoTxt.text += "\na secret needs to be found to unlock";
 			var hints:Array<String> = [
-				"\nbeat one of the first three songs to unlock",
-				"\nbeat the fourth song to unlock",
-				"\nfind it on a youtube video (not literally)",
-				"\nnothing to see here",
+				"beat one of the first three songs to unlock",
+				"beat the fourth song to unlock",
+				"find it on a youtube video (not literally)",
+				"nothing to see here",
 			];
 			if(Highscore.getHighscore('leap-(d-side-mix)').score > 0)
 				hints[3] = "ill tell you at midnight";
 			
-			infoTxt.text += hints[curSelected];
+			infoTxt.text += '\n' + hints[curSelected];
 		}
 		else
 		{
-		
-		infoTxt.text += "\nscore: " + curScore[1];
-		infoTxt.text += " - accuracy: " + Timings.formatAccuracy(curAccuracy[1]) + "%";
-		infoTxt.text += " - misses: " + ((curMisses[1] < 0) ? "--" : "" + curMisses[1]);
+			infoTxt.text += "\nscore: " + curScore[1];
+			infoTxt.text += " - accuracy: " + Timings.formatAccuracy(curAccuracy[1]) + "%";
+			infoTxt.text += " - misses: " + ((curMisses[1] < 0) ? "--" : "" + curMisses[1]);
 		}
-
+		infoTxt.x = (FlxG.width / 2) - (infoTxt.width / 2);
+		infoTxt.y = FlxG.height - infoTxt.height - 10;
 	}
 	
 	function changeSelected(?change:Int = 0, ?playSound:Bool = true)

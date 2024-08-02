@@ -203,7 +203,7 @@ class FreeplayGroup extends MusicBeatGroup
 		curAccuracy[1] 	= isNear(curAccuracy[1], curAccuracy[0], 0.12);
 		curMisses[1] 	= isNear(curMisses[1],	 curMisses[0],	 10);
 		
-		infoTxt.text = "";
+		infoTxt.text = CoolUtil.dashToSpace(selectedSong.toLowerCase());
 		
 		infoTxt.x = (FlxG.width / 2) - (infoTxt.width / 2);
 		infoTxt.y = FlxG.height - infoTxt.height - 10;
@@ -226,7 +226,7 @@ class FreeplayGroup extends MusicBeatGroup
 		}
 		else
 		{
-		infoTxt.text = CoolUtil.dashToSpace(selectedSong.toLowerCase());
+		
 		infoTxt.text += "\nscore: " + curScore[1];
 		infoTxt.text += " - accuracy: " + Timings.formatAccuracy(curAccuracy[1]) + "%";
 		infoTxt.text += " - misses: " + ((curMisses[1] < 0) ? "--" : "" + curMisses[1]);

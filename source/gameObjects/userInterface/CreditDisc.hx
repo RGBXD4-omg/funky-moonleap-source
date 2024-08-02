@@ -23,13 +23,15 @@ class CreditDisc extends FlxSpriteGroup
 	public function new(song:String = 'leap')
 	{
 		super();
-		var composer:String = '\nbeastlychip';
+		var textbro = text.text;
 		switch(song)
 		{
 			case 'crescent' | 'devlog':
-				composer = '\nanakimplay';
+				textbro = '\nby: anakimplay';
 			case 'moonlight':
-				composer = '\njulianobeta';
+				textbro = '\nby: julianobeta';
+			default:
+				textbro = '\nby: ';
 		}
 		
 		disc = new FlxSprite().loadGraphic(Paths.image(location + 'disc'));
@@ -40,7 +42,6 @@ class CreditDisc extends FlxSpriteGroup
 		text.scrollFactor.set();
 		text.setFormat(Main.gFont, 28, FlxColor.fromRGB(0,170,255), LEFT);
 		text.text = CoolUtil.spaceToDash(song);
-		text.text += 'by: $composer';
 		text.y = FlxG.height - text.height - 5;
 		
 		bg = new FlxSprite().loadGraphic(Paths.image(location + 'bar'));

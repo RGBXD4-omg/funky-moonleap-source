@@ -202,13 +202,12 @@ class FreeplayGroup extends MusicBeatGroup
 		curScore[1] 	= isNear(curScore[1],	 curScore[0],	 10);
 		curAccuracy[1] 	= isNear(curAccuracy[1], curAccuracy[0], 0.12);
 		curMisses[1] 	= isNear(curMisses[1],	 curMisses[0],	 10);
-		
+
+		var selectedSong:String = songs[curRow][curSelected];
 		infoTxt.text = CoolUtil.dashToSpace(selectedSong.toLowerCase());
 		
 		infoTxt.x = (FlxG.width / 2) - (infoTxt.width / 2);
 		infoTxt.y = FlxG.height - infoTxt.height - 10;
-
-		var selectedSong:String = songs[curRow][curSelected];
 		
 		if(selectedSong == '???')
 		{

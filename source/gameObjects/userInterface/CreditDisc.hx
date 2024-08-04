@@ -22,7 +22,7 @@ class CreditDisc extends FlxSpriteGroup
 	var song:String = PlayState.SONG.song.toLowerCase();
 	var composer:String = 'beastlychip';
 
-	public function new(song:String = PlayState.SONG.song.toLowerCase())
+	public function new(song)
 	{
 		super();
 		

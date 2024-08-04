@@ -19,7 +19,7 @@ class CreditDisc extends FlxSpriteGroup
 	var disc:FlxSprite;
 	var bg:FlxSprite;
 	var text:FlxText;
-	var song:String = curSong;
+	var song:String = PlayState.SONG.song.toLowerCase();
 	var composer:String = 'beastlychip';
 
 	public function new(song:String = curSong)
